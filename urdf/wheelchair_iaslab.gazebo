@@ -6,7 +6,7 @@
             <odometryTopic>wcias_controller/odom</odometryTopic>
             <odometryFrame>/$(arg prefix)odom</odometryFrame>
             <odometrySource>world</odometrySource>
-            <publishOdomTF>true</publishOdomTF>
+            <publishOdomTF>false</publishOdomTF>
             <robotBaseFrame>/$(arg prefix)base_footprint</robotBaseFrame>
             <publishWheelTF>false</publishWheelTF>
             <publishTf>true</publishTf>

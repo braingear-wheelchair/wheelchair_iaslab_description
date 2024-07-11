@@ -2,7 +2,7 @@
 <robot>
     <gazebo>
         <plugin name="gazebo_ros_controller" filename="libgazebo_ros_diff_drive.so">
-            <commandTopic>wcias_controller/cmd_vel</commandTopic>
+            <commandTopic>/cmd_vel</commandTopic>
             <odometryTopic>wcias_controller/odom</odometryTopic>
             <odometryFrame>/$(arg prefix)odom</odometryFrame>
             <odometrySource>world</odometrySource>

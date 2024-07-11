@@ -122,6 +122,10 @@
         <origin xyz="${xpos} -${ypos} ${zcamera}" rpy="0 0 0"/>
     </xacro:sensor_d435> 
 
+    <xacro:sensor_d435 name="camera_top" parent="$(arg prefix)base_footprint">
+        <origin xyz="-0.3 0.0 1.47" rpy="0 0.147 0"/>
+    </xacro:sensor_d435> 
+
 </robot>
 
 

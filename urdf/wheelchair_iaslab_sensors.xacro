@@ -8,10 +8,12 @@
 
     <xacro:include filename="wheelchair_iaslab.xacro" />  
 
-    <xacro:property name="xpos"    value ="0.346609" /> 
-    <xacro:property name="ypos"    value ="0.295568" />
+    <xacro:property name="xpos"    value ="0.45" /> 
+    <xacro:property name="ypos"    value ="0.30" />
     <xacro:property name="zcamera" value ="0.58" /> 
-    <xacro:property name="zlaser"  value ="0.66" /> 
+    <xacro:property name="zlaser"  value ="0.58" /> 
+    <xacro:property name="rotylaser"  value ="1.57" /> 
+
 
     <!-- Laser Hokuyo properties -->
     <xacro:property name="laser_length" value="0.04"  />
@@ -45,7 +47,7 @@
         <axis xyz="0 1 0"/>
         <parent link="$(arg prefix)base_footprint"/>
         <child link="$(arg prefix)hokuyo_laser_link_left"/>
-        <origin xyz="${xpos}  ${ypos}  ${zlaser}" rpy="0 0 0" /> 
+        <origin xyz="${xpos}  ${ypos}  ${zlaser}" rpy="0 0 ${rotylaser}" /> 
         <axis xyz="0 1 0"/>
     </joint>
 
@@ -75,7 +77,7 @@
     <joint name="$(arg prefix)base_laser_joint_right" type="fixed">
         <parent link="$(arg prefix)base_footprint"/>
         <child link="$(arg prefix)hokuyo_laser_link_right"/>
-        <origin xyz="${xpos} -${ypos} ${zlaser}" rpy="0 0 0" /> 
+        <origin xyz="${xpos} -${ypos} ${zlaser}" rpy="0 0 -${rotylaser}" /> 
         <axis xyz="0 1 0"/>
 
     </joint>
